@@ -1,0 +1,63 @@
+/* html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem
+}
+
+.container {
+    width: 80%;
+    height: 100vh;
+    padding: 20px;
+    border: 1cm solid #04211c;
+    margin: 2in auto;
+}
+
+.box {
+    width: 10em;
+    height: 5em;
+    font-size: 12pt;
+    border: 2mm dashed #c9d21d;
+} */
+ 
+ .classy {
+background-color: DodgerBlue;
+}
+
+.img-pequena {
+  max-width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.img-mediana {
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+p {
+color: #0e9799;
+font-size: 24px;
+} 
+
+#identified {
+background-color: skyblue;
+}
+
+.titulo-principal {
+  font-family: 'Story Script' cursive;
+}
+
+.story-script-regular {
+  text-align: center;
+  font-size: 80px;
+  color: #2eb797;
+  font-family: "Story Script", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 4px;
+}
