@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DetoxNow</title>
+  <title>Productos</title>
   <link rel="stylesheet" type="text/css" href="estilos.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,21 +27,27 @@ wIH" crossorigin="anonymous">
     }
   </style>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 </head>
 
 <body>
   <div class="banner-superior"></div>
-
-    <h1 class="story-script-regular ">DetoxNow</h1>
-
 <div class="container">
-  <nav class="nav justify-content-center bg-body-tertiary shadow p-2 rounded">
-    <a class="nav-link text-success" href="index.html">Home</a>
-    <a class="nav-link text-success" href="productos.html">Productos</a>
-    <a class="nav-link text-success" href="nosotros.html">Nosotros</a>
-    <a class="nav-link text-success" href="blog.html">Blogs</a>
-    <a class="nav-link text-success" href="contacto.html">Contacto</a>
+  <nav class="nav justify-content-between bg-body-tertiary shadow p-2 rounded align-items-center">
+    <div class="d-flex">
+      <a class="nav-link text-success" href="index.html">Home</a>
+      <a class="nav-link text-success" href="productos.html">Productos</a>
+      <a class="nav-link text-success" href="nosotros.html">Nosotros</a>
+      <a class="nav-link text-success" href="blog.html">Blogs</a>
+      <a class="nav-link text-success" href="contacto.html">Contacto</a>
+    </div>
+
+    <!-- Carrito alineado a la derecha -->
+    <a href="carrito.html" class="nav-link text-success">
+      <i class="bi bi-cart-fill"></i> 
+      <span class="badge bg-warning text-dark">3</span>
+    </a>
   </nav>
 </div>
 
@@ -52,126 +58,133 @@ wIH" crossorigin="anonymous">
   <a class="text-end nav-link text-success me-2" href="registro.html">Registro</a>
   </nav>
  </div>
-<div class="container mt-5" id="productoshome">
-  <div class="card mb-3" >
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+ 
+    <!-- Sección Empresa -->
+<div class="container my-5 py-5 bg-light shadow rounded" id="nosotroshome">
+  <div class="row align-items-center">
 
-  <div class="container mt-5" id="productos">
+  <div class="container mt-5 mb-5" id="empresa">
+  
+        <h2 class="text-center mb-4">Sobre Detox Now</h2>
+     <div class="row">
+          <div class="col-md-6">
+            <p><strong>Detox Now</strong> es una empresa dedicada a promover el bienestar y la salud a través de 
+            productos naturales y sostenibles. Nuestro objetivo es ofrecer soluciones que ayuden a 
+            desintoxicar y revitalizar el cuerpo de manera natural.</p>
+              <p></p>
+              <a class="btn btn-success" href="productos.html#producto1">Ver más Productos</a>
+          </div>
+     <div class="col-md-6">
+       <div id="carouselEmpresa" class="carousel slide shadow rounded" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imagenes/descripcion 1.jpg" class="img-mediana" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/descripcion 2.jpg" class="img-mediana" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/descripcion 3.jpg" class="img-mediana" alt="Imagen 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselEmpresa" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselEmpresa" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          
+          </button>
+        
+       </div>
+     </div>
+    </div> 
+  </div>
+ </div>
+</div>    <!--Cierre Nosotros--> 
+
+
+  <!-- Contenedor-->
+
+  <div class="container mt-5 py-5" id="productos">
     <h2 class="text-center mb-4">Nuestros Productos</h2>
     <div class="row">
       <div class="col-md-4 mb-4">
-        <div class="card shadow">
-          <img src="imagenes/Producto 1.jpg" class="img-pequena" alt="Producto 1">
+        <div class="card shadow h-100 d-flex flex-column">
+          <img src="imagenes/Batido Verde Clásico.jpg" class="img-pequena" alt="Producto 1">
           <div class="card-body">
-            <h5 class="card-title">Producto 1</h5>
-            <p class="card-text">Descripción breve del producto.</p>
+            <h5 class="card-title" id="producto1">Batido Verde Clásico</h5>
+            <p class="card-text">Rico en clorofila y antioxidantes, ayuda a limpiar el sistema digestivo y aporta frescura. Ideal para comenzar el día ligero.</p>
             <a href="#pago" class="btn btn-success">Comprar</a>
           </div>
         </div>
       </div>
 
       <div class="col-md-4 mb-4">
-        <div class="card shadow">
-          <img src="imagenes/Producto 1.jpg" class="img-pequena" alt="Producto 1">
-          <div class="card-body">
-            <h5 class="card-title">Producto 2</h5>
-            <p class="card-text">Descripción breve del producto.</p>
+        <div class="card shadow h-100 d-flex flex-column">
+          <img src="imagenes/Batido Tropical Detox.jpg" class="img-pequena" alt="Producto 1">
+          <div class="card-body ">
+            <h5 class="card-title">Batido Tropical Detox</h5>
+            <p class="card-text">Refrescante y digestivo. La piña aporta bromelina (enzima antiinflamatoria) y la cúrcuma potencia el efecto desintoxicante.</p>
             <a href="#pago" class="btn btn-success">Comprar</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="card shadow">
-          <img src="imagenes/Producto 1.jpg" class="img-pequena" alt="Producto 1">
-          <div class="card-body">
-            <h5 class="card-title">Producto 3</h5>
-            <p class="card-text">Descripción breve del producto.</p>
+        <div class="card shadow h-100 d-flex flex-column">
+          <img src="imagenes/Batido Limón & Chía.jpg" class="img-pequena" alt="Producto 1">
+          <div class="card-body ">
+            <h5 class="card-title ">Batido Limón & Chía</h5>
+            <p class="card-text">Hidratante y depurativo, mejora la digestión y ayuda a la sensación de saciedad gracias a la chía.</p>
             <a href="#pago" class="btn btn-success">Comprar</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="card shadow">
+        <div class="card shadow h-100 d-flex flex-column">
           <img src="imagenes/Producto 1.jpg" class="img-pequena" alt="Producto 1">
-          <div class="card-body">
-            <h5 class="card-title">Producto 4</h5>
-            <p class="card-text">Descripción breve del producto.</p>
+          <div class="card-body ">
+            <h5 class="card-title">Batido Rojo Antioxidante</h5>
+            <p class="card-text ">Potente fuente de antioxidantes que protegen las células, favorecen la circulación y aportan energía natural.</p>
             <a href="#pago" class="btn btn-success">Comprar</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="card shadow">
-          <img src="imagenes/Producto 1.jpg" class="img-pequena" alt="Producto 1">
+        <div class="card shadow h-100 d-flex flex-column">
+          <img src="imagenes/Producto 1.jpg" class="img-pequena" alt="h-100 d-flex flex-column">
           <div class="card-body">
-            <h5 class="card-title">Producto 5</h5>
-            <p class="card-text">Descripción breve del producto.</p>
+            <h5 class="card-title">Batido Verde Dulce</h5>
+            <p class="card-text ">Combina lo detox del kale con la dulzura del mango y el plátano, logrando un batido nutritivo y agradable al paladar.</p>
             <a href="#pago" class="btn btn-success">Comprar</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="card shadow">
-          <img src="imagenes/Producto 1.jpg" class="img-pequena" alt="Producto 1">
+        <div class="card shadow h-100 d-flex flex-column">
+          <img src="imagenes/Producto 1.jpg" class="img-pequena" alt="h-100 d-flex flex-column">
           <div class="card-body">
-            <h5 class="card-title">Producto 6</h5>
-            <p class="card-text">Descripción breve del producto.</p>
+            <h5 class="card-title">Batido Cremoso Detox</h5>
+            <p class="card-text ">Cremoso y saciante. El aguacate aporta grasas saludables y ayuda a mantener energía por más tiempo.</p>
             <a href="#pago" class="btn btn-success">Comprar</a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-
-  <!-- Sección Empresa -->
-  <div class="container mt-5 mb-5" id="empresa">
-    <h2 class="text-center mb-4">Sobre Detox Now</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <p><strong>Detox Now</strong> es una empresa dedicada a promover el bienestar y la salud a través de 
-        productos naturales y sostenibles. Nuestro objetivo es ofrecer soluciones que ayuden a 
-        desintoxicar y revitalizar el cuerpo de manera natural.</p>
-      </div>
-      <div class="col-md-6">
-   <div id="carouselEmpresa" class="carousel slide shadow rounded" data-bs-ride="carousel" data-bs-interval="3000">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="imagenes/descripcion 1.jpg" class="img-mediana" alt="Imagen 1">
-      </div>
-      <div class="carousel-item">
-        <img src="imagenes/descripcion 2.jpg" class="img-mediana" alt="Imagen 2">
-      </div>
-      <div class="carousel-item">
-        <img src="imagenes/descripcion 3.jpg" class="img-mediana" alt="Imagen 3">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEmpresa" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselEmpresa" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-    
-   </div>
-  </div>
     </div>
   </div>
 
 
 </body>
+
+<!-- Footer -->
+<footer class="d-flex justify-content-center align-items-center">
+  <div class="container">
+    <p class="mb-1">© 2025 Detox Now - Todos los derechos reservados</p>
+    <div>
+      <a href="#" class="text-success me-3">Política de Privacidad</a>
+      <a href="#" class="text-success me-3">Términos y Condiciones</a>
+      <a href="#" class="text-success">Contacto</a>
+    </div>
+  </div>
+</footer>
 
 </html>

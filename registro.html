@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DetoxNow</title>
+  <title>registro</title>
   <link rel="stylesheet" type="text/css" href="estilos.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,6 +72,8 @@ wIH" crossorigin="anonymous">
           </div>
       <div class="container mt-5" id="registro">    
         <!-- Formulario -->
+<div class="container my-5 bg-light shadow rounded" id="registro">
+  <div class="row align-items-center">         
         <form id="formRegistro" class="row g-3">
           <!-- Usuario -->
           <div class="col-12">
@@ -120,14 +122,14 @@ wIH" crossorigin="anonymous">
           </div>
 
           <div class="col-md-6 mb-3">
-            <label for="mascota" class="form-label">Nombre de Mascota</label>
-            <input type="text" class="form-control is-valid" id="mascota" required>
-            <div class="valid-feedback">Ingrese el nombre de su mascota</div>
+            <label for="mascota" class="form-label ">Direccion</label>
+            <input type="text " class="form-control is-valid" id="mascota" required>
+            <div class="valid-feedback">calle y numero</div>
           </div>
           <div class="col-md-4">
-            <label for="inputState" class="form-label">Tipo de Mascota</label>
+            <label for="inputState" class="form-label">Comuna</label>
             <select id="inputState" class="form-select">
-              <option selected>Tipo</option>
+              <option selected>seleccione</option>
               <option>Gato</option>
               <option>Perro</option>
               <option>Ave</option>
@@ -135,16 +137,25 @@ wIH" crossorigin="anonymous">
             </select>
             <div class="valid-feedback">Ingrese el tipo de mascota</div>
           </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Region</label>
+            <select id="inputState" class="form-select">
+              <option selected>seleccione</option>
+              <option>Gato</option>
+              <option>Perro</option>
+              <option>Ave</option>
+              <option>Otro</option>
+            </select>
+          </div>          
 
           <div class="col-12 text-center">
-            <a href="succes.html" class="btn btn-info w-100" type="submit">Registrar</a>
+            <a href="succes.html" class="btn btn-success w-100" type="submit">Registrar</a>
           </div>
         </form>
       </main>
-      </div>
-    </div>
+        
   </div>
-
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
