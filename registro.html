@@ -82,48 +82,49 @@ wIH" crossorigin="anonymous">
           <div class="col-12">
             <h2 class="text-center my-4">Registro de Usuario</h2>
           </div>
-
+          <!-- Nombre de usuario -->
           <div class="col-md-6 mb-3">
             <label for="nombre" class="form-label">Nombre Completo</label>
             <input type="text" class="form-control" id="nombre" required>
-            <div class="valid-feedback">Nombre y Apellido</div>
+            <div class="invalid-feedback">Debe ingresar su nombre y apellido</div>
           </div>
-
+          <!-- Correo electronico -->
           <div class="col-md-6 mb-3">
             <label for="correo" class="form-label">Correo Electrónico</label>
             <input type="email" class="form-control" id="correo" required>
-            <div class="valid-feedback">Ingrese su correo</div>
+            <div class="invalid-feedback">Ingrese su correo</div>
           </div>
-
+          <!-- Contraseña -->
           <div class="col-md-6 mb-3">
             <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control is-valid" id="password" required>
-            <div class="valid-feedback">
-              <p>▪ Al menos 8 caracteres</p>
-              <p>▪ Una letra mayúscula</p>
-              <p>▪ Una letra minúscula</p>
-              <p>▪ Un número</p>
-              <p>▪ Un carácter especial (@#$%).</p>
-            </div>
+            <input type="password" class="form-control" id="password" required>
+            <div class="invalid-feedback">La contraseña es obligatoria y debe cumplir con los requisitos.</div>
+            <div class="form-text">
+  ▪ Al menos 8 caracteres<br>
+  ▪ Una letra mayúscula<br>
+  ▪ Una letra minúscula<br>
+  ▪ Un número<br>
+  ▪ Un carácter especial (@#$%)
+</div>
           </div>
-
+          <!-- Confirmar Contraseña -->
           <div class="col-md-6 mb-3">
             <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-            <input type="password" class="form-control is-valid" id="confirmPassword" required>
-            <div class="valid-feedback">Repita la contraseña</div>
+            <input type="password" class="form-control" id="confirmPassword" required>
+            <div class="invalid-feedback">Las contraseñas no coinciden</div>
           </div>
-
+          <!-- Teléfono -->
           <div class="col-md-6 mb-3">
             <label for="telefono" class="form-label">Teléfono</label>
-            <input type="text" class="form-control" id="telefono">
+            <input type="number" class="form-control" id="telefono">
             <div class="form-text">Opcional</div>
           </div>
 
-          <!-- Mascota -->
+          <!-- Dirección, Comuna, Región -->
                     <div class="col-md-6 mb-3">
             <label for="mascota" class="form-label ">Direccion</label>
-            <input type="text " class="form-control is-valid" id="mascota" required>
-            <div class="valid-feedback">calle y numero</div>
+            <input type="text" class="form-control" id="mascota" required>
+            <div class="invalid-feedback">Debe ingresar una direccion</div>
           </div>
           <div class="col-md-4">
             <label for="inputState" class="form-label">Comuna</label>
@@ -148,7 +149,8 @@ wIH" crossorigin="anonymous">
           </div>          
 
           <div class="col-12 text-center">
-            <a href="succes.html" class="btn btn-success w-100" type="submit">Registrar</a>
+            <button type="submit" class="btn btn-success w-100">Registrar</button>
+            <!--<a href="success.html" class="btn btn-success w-100" type="submit">Registrar</a>-->
           </div>
         </form>
       </main>
@@ -156,5 +158,6 @@ wIH" crossorigin="anonymous">
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="validacion.js"></script>
 </body>
 </html>
