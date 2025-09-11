@@ -39,6 +39,29 @@ background-color: DodgerBlue;
   display: block;
 }
 
+.img-grande {
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.producto-relacionado{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card.clickable {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card.clickable:hover {
+  transform: scale(1.05);
+}
+
 p {
   color: #0e9799;
   font-size: 24px;
