@@ -1,159 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Detalle del Producto</title>
-
-    <!-- Bootstrap y fuentes -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Story+Script&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="estilos.css">
-
-    <style>
-        .product-image {
-            max-width: 100%;
-            border-radius: 12px;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-        }
-        .product-title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #2eb797;
-        }
-        .product-price {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #198754; /* verde Bootstrap */
-        }
-        .divider {
-            border-top: 2px solid #ddd;
-            margin: 1.5rem 0;
-        }
-        .related-products img {
-            max-width: 100%;
-            border-radius: 8px;
-            transition: transform 0.2s ease-in-out;
-            cursor: pointer;
-        }
-        .related-products img:hover {
-            transform: scale(1.05);
-        }
-        .banner-superior {
-		background: url("imagenes/primera_imag.jpg") center/cover no-repeat;
-		height: 300px; /* altura del banner */
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: white;
-		text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        }
-    </style>
-
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Detalle del Producto</title>
+	<link rel="stylesheet" href="prueba.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
-
 <body>
-    <!-- Banner -->
-    <div class="banner-superior"></div>
+	<div class="banner-superior"></div>
 
-    <!-- Barra de navegación -->
-    <div class="container">
-        <nav class="nav justify-content-between bg-body-tertiary shadow p-2 rounded align-items-center">
-            <div class="d-flex">
-                <a class="nav-link text-success" href="index.html">Home</a>
-                <a class="nav-link text-success" href="productos.html">Productos</a>
-                <a class="nav-link text-success" href="nosotros.html">Nosotros</a>
-                <a class="nav-link text-success" href="blog.html">Blogs</a>
-                <a class="nav-link text-success" href="contacto.html">Contacto</a>
-            </div>
-            <a href="carrito.html" class="nav-link text-success">
-                <i class="bi bi-cart-fill"></i> 
-                <span class="badge bg-warning text-dark">3</span>
-            </a>
-        </nav>
-    </div>
+	<div class="container">
+		<nav class="nav justify-content-between bg-body-tertiary shadow p-2 rounded align-items-center">
+			<div class="d-flex">
+				<a class="nav-link text-success" href="index.html">Home</a>
+				<a class="nav-link text-success" href="productos.html">Productos</a>
+				<a class="nav-link text-success" href="nosotros.html">Nosotros</a>
+				<a class="nav-link text-success" href="blog.html">Blogs</a>
+				<a class="nav-link text-success" href="contacto.html">Contacto</a>
+			</div>
+			<a href="carrito.html" class="nav-link text-success">
+				<i class="bi bi-cart-fill"></i>
+				<span class="badge bg-warning text-dark" id="cartCount">0</span>
+			</a>
+		</nav>
+	</div>
 
-    <!-- Login / Registro -->
-    <div class="container">
-        <nav class="d-flex justify-content-end p-3">
-            <a class="text-end nav-link text-success me-2" href="login.html">Iniciar sesión</a>
-            <a class="text-end nav-link text-success me-2">|</a>
-            <a class="text-end nav-link text-success me-2" href="registro.html">Registro</a>
-        </nav>
-    </div>
+	<div class="container my-5" id="detalle-producto">
+		<div class="row g-5">
+			<div class="col-md-6 text-center">
+				<img id="producto-imagen" src="" alt="Imagen producto" class="product-image">
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center mb-2">
+					<h2 id="producto-nombre" class="product-title"></h2>
+					<span id="producto-precio" class="product-price"></span>
+				</div>
 
-    <!-- Detalle del producto -->
-    <div class="container my-5">
-        <div class="row g-5">
-            <!-- Imagen -->
-            <div class="col-md-6 text-center">
-                <img src="imagenes/Batido Verde Clásico.jpg" alt="Batido Verde Clásico" class="product-image img-grande">
-            </div>
-            <!-- Detalles -->
-            <div class="col-md-6">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2 class="product-title">Batido Verde Clásico</h2>
-                    <span class="product-price">$4.990</span>
-                </div>
+				<div class="divider"></div>
+				<p id="producto-descripcion"></p>
+				<div class="divider"></div>
 
-                <hr class="divider">
-                <p>
-                Rico en clorofila y antioxidantes, ayuda a limpiar el sistema digestivo y aporta frescura.
-                Ideal para comenzar el día ligero.
-                </p>
+				<div class="mb-3">
+					<label for="cantidad" class="form-label">Cantidad</label>
+					<select id="cantidad" class="form-select" style="max-width:120px;">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<button id="addToCart" class="btn btn-success btn-lg btn-add">
+					<i class="bi bi-cart-plus"></i> Agregar al carrito
+				</button>
+			</div>
+		</div>
+	</div>
 
-                <hr class="divider">
-                <!-- Cantidad y botón -->
-                <div class="mb-3">
-                    <label for="cantidad" class="form-label">Cantidad</label>
-                    <select id="cantidad" class="form-select" style="max-width: 120px;">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                </div>
-                <button class="btn btn-success btn-lg">
-                    <i class="bi bi-cart-plus"></i> Agregar al carrito
-                </button>
-            </div>
-        </div>
-    </div>
+	<!-- Related -->
+	<div class="container my-5">
+		<h3 class="mb-4 text-center">Productos Relacionados</h3>
+		<div class="row g-3" id="relatedContainer">
+		<!-- Se generan dinámicamente -->
+		</div>
+	</div>
 
-    <!-- Productos relacionados -->
-    <div class="container mt-5">
-        <h3 class="mb-4 text-center">Productos Relacionados</h3>
-        <div class="row justify-content-center">
-            <div class="col-6 col-md-3 mb-3">
-                <div class="card shadow clickable" onclick="window.location.href='detProducto.html?producto=batido-verde'">
-                    <img src="imagenes/Batido Verde Clásico.jpg" class="producto-relacionado" alt="Batido Verde Clásico">
-                </div>
-            </div>
-        <div class="col-6 col-md-3 mb-3">
-            <div class="card shadow clickable" onclick="window.location.href='detProducto.html?producto=batido-tropical'">
-                <img src="imagenes/Batido Tropical Detox.jpg" class="producto-relacionado" alt="Batido Tropical Detox">
-            </div>
-        </div>
-        <div class="col-6 col-md-3 mb-3">
-            <div class="card shadow clickable" onclick="window.location.href='detProducto.html?producto=batido-limon-chia'">
-                <img src="imagenes/Batido Limón & Chía.jpg" class="producto-relacionado" alt="Batido Limón & Chía">
-            </div>
-        </div>
-        <div class="col-6 col-md-3 mb-3">
-            <div class="card shadow clickable" onclick="window.location.href='detProducto.html?producto=batido-rojo'">
-                <img src="imagenes/Batido Rojo Antioxidante.jpg" class="producto-relacionado" alt="Batido Rojo Antioxidante">
-            </div>
-        </div>
-    </div>
-</div>
+	<!-- scripts -->
+	<script src="producto.js"></script>
 
+	<script>
+	// Extraer param 'producto'
+	const params = new URLSearchParams(window.location.search);
+	const idProducto = params.get('producto') || 'batido-verde';
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+	// Buscar producto en productos.js
+	const producto = productos[idProducto];
 
+	// Elementos del DOM
+	const elNombre = document.getElementById('producto-nombre');
+	const elPrecio = document.getElementById('producto-precio');
+	const elImagen = document.getElementById('producto-imagen');
+	const elDesc = document.getElementById('producto-descripcion');
+	const relatedContainer = document.getElementById('relatedContainer');
+	const cartCount = document.getElementById('cartCount');
+
+	// Función para cargar contador carrito desde localStorage
+	function updateCartCount() {
+		const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+		const total = cart.reduce((s, item) => s + Number(item.qty || 0), 0);
+		cartCount.textContent = total;
+	}
+
+	if (!producto) {
+		document.getElementById('detalle-producto').innerHTML = '<p>Producto no encontrado.</p>';
+		updateCartCount();
+	} else {
+		// Poblar elementos
+		elNombre.textContent = producto.nombre;
+		elPrecio.textContent = producto.precioDisplay || ('$' + (producto.precio || '0'));
+		elImagen.src = producto.imagen;
+		elImagen.alt = producto.nombre;
+		elDesc.textContent = producto.descripcion;
+
+		// Mostrar relacionados
+		relatedContainer.innerHTML = '';
+		const relatedIds = producto.related || Object.keys(productos).filter(k => k !== producto.id).slice(0,3);
+		relatedIds.forEach(rid => {
+			const rp = productos[rid];
+			if (!rp) return;
+			const col = document.createElement('div');
+			col.className = 'col-6 col-md-3';
+			col.innerHTML = `
+			<div class="related-card card shadow clickable" onclick="window.location.href='detProducto.html?producto=${rp.id}'">
+				<img src="${rp.imagen}" alt="${rp.nombre}" class="producto-relacionado mb-2">
+				<div style="font-weight:600">${rp.nombre}</div>
+			</div>
+			`;
+			relatedContainer.appendChild(col);
+		});
+
+		// Botón agregar al carrito
+		document.getElementById('addToCart').addEventListener('click', () => {
+			const qty = Number(document.getElementById('cantidad').value || 1);
+			const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+			const existing = cart.find(i => i.id === producto.id);
+			if (existing) existing.qty = Number(existing.qty) + qty;
+			else cart.push({ id: producto.id, nombre: producto.nombre, price: producto.precio, qty });
+			localStorage.setItem('cart', JSON.stringify(cart));
+
+			// feedback al usuario
+			alert(`Se agregó ${qty} × ${producto.nombre} al carrito.`);
+			updateCartCount();
+		});
+
+		updateCartCount();
+	}
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<!-- Footer -->
+<footer class="bg-light border-top mt-5">
+  <div class="container py-4">
+    <div class="row">
+      <!-- Columna 1: Nombre del sitio -->
+      <div class="col-md-3 mb-3">
+        <h6 class="text-uppercase color: #4CAF50">Detox Now</h6>
+        <div class="d-flex gap-2 mt-2">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" width="40">
+          <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="Mastercard" width="40">
+          <img src="https://img.icons8.com/ios-filled/48/000000/paypal.png" alt="PayPal" width="40">
+        </div>
+      </div>
 
+      <!-- Columna 2: Categorías -->
+      <div class="col-md-4 mb-3">
+        <h6 class="text-uppercase">Categorías</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">Política de Privacidad</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Términos y Condiciones</a></li>
+          <li><a href="contacto.html" class="text-decoration-none text-dark">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Newsletter -->
+      <div class="col-md-5 mb-3">
+        <h6 class="text-uppercase">Estas a un paso, suscribete a nuestro Newsletter:</h6>
+        <form class="d-flex">
+          <input type="email" class="form-control me-2" placeholder="Ingresar Email">
+          <button class="btn btn-dark" type="submit">Subscribir</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
 </html>
