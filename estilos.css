@@ -133,7 +133,6 @@ p {
   .product-title { font-size: 1.6rem; }
   .product-price { font-size: 1.2rem; }
 }
-<<<<<<< HEAD
 .success {
   color: green;
   font-size: 0.9em;
@@ -158,5 +157,3 @@ footer {
   background-color: #ffffff;  /* mismo color */
   color: #2eb797;              /* para que el texto contraste */
 }
-=======
->>>>>>> d0235b6410a8eee6cc7ab2f6cc9fe035eb672e88
