@@ -16,17 +16,6 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
-<<<<<<< HEAD
-.box {
-    width: 10em;
-    height: 5em;
-    font-size: 12pt;
-    border: 2mm dashed #c9d21d;
-} */
-
-.classy {
-background-color: #2eb797;
-=======
 /* Tarjetas clickeables */
 .card.clickable {
     cursor: pointer;
@@ -35,7 +24,6 @@ background-color: #2eb797;
 .card.clickable:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 8px 22px rgba(0,0,0,0.14);
->>>>>>> d0235b6410a8eee6cc7ab2f6cc9fe035eb672e88
 }
 
 /* Thumbnails en grid de productos (uniformes) */
@@ -84,22 +72,11 @@ background-color: #2eb797;
   margin: 1.25rem 0;
 }
 
-<<<<<<< HEAD
-p {
-  color: #2eb797;
-  font-size: 24px;
-  text-align: justify;
-} 
-
-#identified {
-  background-color: rgb(98, 253, 116);
-=======
 /* Ajustes generales de texto en detalle */
 #detalle-producto p {
   color: #444;
   font-size: 1rem;
   line-height: 1.6;
->>>>>>> d0235b6410a8eee6cc7ab2f6cc9fe035eb672e88
 }
 
 /* Productos relacionados: centro y espaciado */
@@ -133,30 +110,3 @@ p {
   .product-title { font-size: 1.6rem; }
   .product-price { font-size: 1.2rem; }
 }
-<<<<<<< HEAD
-.success {
-  color: green;
-  font-size: 0.9em;
-}
-input {
-  display: block;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 250px;
-}
-
-.form-container-l {
-  max-width: 500px;           /* ancho máximo del contenedor */
-  background: #fff;           /* fondo blanco */
-  padding: 30px;              /* espacio interno */
-  border: 2px solid green;    /* borde verde */
-  border-radius: 12px;        /* bordes redondeados */
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* sombra */
-}
-
-footer {
-  background-color: #ffffff;  /* mismo color */
-  color: #2eb797;              /* para que el texto contraste */
-}
-=======
->>>>>>> d0235b6410a8eee6cc7ab2f6cc9fe035eb672e88
