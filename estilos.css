@@ -143,3 +143,11 @@ footer {
   background-color: #ffffff;  /* mismo color */
   color: #2eb797;              /* para que el texto contraste */
 }
+
+.invalido {
+  color: red;
+}
+
+.valido {
+  color: green;
+}
