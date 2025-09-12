@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- Contraseña ---
     const password = document.getElementById("password");
-    // Regex flexible: minúscula, mayúscula, número, carácter especial, mínimo 8
     const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
     if (!passRegex.test(password.value)) {
       password.classList.add("is-invalid");
