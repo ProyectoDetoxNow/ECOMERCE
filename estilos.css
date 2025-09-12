@@ -16,7 +16,6 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
-<<<<<<< HEAD
 .box {
     width: 10em;
     height: 5em;
@@ -26,16 +25,6 @@ body {
 
 .classy {
 background-color: #2eb797;
-=======
-/* Tarjetas clickeables */
-.card.clickable {
-    cursor: pointer;
-    transition: transform 0.18s ease-in-out, box-shadow 0.18s;
-}
-.card.clickable:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
->>>>>>> d0235b6410a8eee6cc7ab2f6cc9fe035eb672e88
 }
 
 /* Thumbnails en grid de productos (uniformes) */
@@ -84,7 +73,6 @@ background-color: #2eb797;
   margin: 1.25rem 0;
 }
 
-<<<<<<< HEAD
 p {
   color: #2eb797;
   font-size: 24px;
@@ -93,13 +81,6 @@ p {
 
 #identified {
   background-color: rgb(98, 253, 116);
-=======
-/* Ajustes generales de texto en detalle */
-#detalle-producto p {
-  color: #444;
-  font-size: 1rem;
-  line-height: 1.6;
->>>>>>> d0235b6410a8eee6cc7ab2f6cc9fe035eb672e88
 }
 
 /* Productos relacionados: centro y espaciado */
