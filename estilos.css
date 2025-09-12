@@ -22,7 +22,7 @@ body {
 } */
 
 .classy {
-background-color: DodgerBlue;
+background-color: #2eb797;
 }
 
 .img-pequena {
@@ -63,7 +63,7 @@ background-color: DodgerBlue;
 }
 
 p {
-  color: #0e9799;
+  color: #2eb797;
   font-size: 24px;
   text-align: justify;
 } 
@@ -108,4 +108,9 @@ input {
   border: 2px solid green;    /* borde verde */
   border-radius: 12px;        /* bordes redondeados */
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* sombra */
+}
+
+footer {
+  background-color: #ffffff;  /* mismo color */
+  color: #2eb797;              /* para que el texto contraste */
 }
