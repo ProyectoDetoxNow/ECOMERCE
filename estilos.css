@@ -151,3 +151,16 @@ footer {
 .valido {
   color: green;
 }
+.img-mediana {
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.img-pequena {
+  max-width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
