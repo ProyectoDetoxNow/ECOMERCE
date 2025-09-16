@@ -164,3 +164,9 @@ footer {
   margin: 0 auto;
   display: block;
 }
+
+#titleB {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+} 
