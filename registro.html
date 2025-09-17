@@ -87,7 +87,7 @@
           <div class="mb-3">
             <label for="correo" class="form-label">Correo Electrónico</label>
             <input type="email" class="form-control" id="correo" required>
-            <div class="invalid-feedback">Ingrese su correo</div>
+            <div class="invalid-feedback">Solo se aceptan correos con dominio @duoc.cl , @profesor.duoc.cl o @gmail.com</div>
           </div>
 
           <!-- Contraseña -->
@@ -97,27 +97,19 @@
             <div class="invalid-feedback">
               La contraseña es obligatoria y debe cumplir con los requisitos.
             </div>
-            <!-- <div class="form-text" id="requisitosPassword">
+            <div class="form-text" id="requisitosPassword">
   <p id="longitud" class="invalido">▪ Al menos 8 caracteres</p>
   <p id="mayuscula" class="invalido">▪ Una letra mayúscula</p>
   <p id="minuscula" class="invalido">▪ Una letra minúscula</p>
   <p id="numero" class="invalido">▪ Un número</p>
   <p id="especial" class="invalido">▪ Un carácter especial (@#$%)</p>
-</div> -->
-            <div class="form-text">
-              ▪ Al menos 8 caracteres<br>
-              ▪ Una letra mayúscula<br>
-              ▪ Una letra minúscula<br>
-              ▪ Un número<br>
-              ▪ Un carácter especial (@#$%)
-            </div>
-          </div>
-
+</div>
+          </div>  
           <!-- Confirmar Contraseña -->
           <div class="mb-3">
             <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
             <input type="password" class="form-control" id="confirmPassword" required>
-            <div class="invalid-feedback">Las contraseñas no coinciden</div>
+            <div class="invalid-feedback" id="confirmPasswordFeedback">Las contraseñas no coinciden</div>
           </div>
 
           <!-- Teléfono -->

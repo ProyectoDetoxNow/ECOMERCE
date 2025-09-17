@@ -146,10 +146,17 @@ footer {
 
 .invalido {
   color: red;
+  font-size: 14px;
+  margin: 0;          /* quita espacios extra */
+  font-weight: 500;
 }
 
 .valido {
   color: green;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;          /* quita espacios extra */
+  font-weight: 500;
 }
 .img-mediana {
   max-width: 350px;
@@ -170,3 +177,8 @@ footer {
   font-size: 40px;
   font-weight: bold;
 } 
+
+.form-text-condiciones {
+  font-size: 14px;
+  color: #2eb797;
+}
