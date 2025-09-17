@@ -21,26 +21,38 @@
   </style>
 </head>
 <body>
-
-  
+  <div class="container">
+      <!-- Banner -->
   <div class="banner-superior"></div>
 
-  <h1 class="text-center my-4">Guau & Miau</h1>
-<div class="container">
-  <nav class="nav justify-content-between bg-body-tertiary shadow p-2 rounded align-items-center">
-    <div class="d-flex">
-      <a class="nav-link text-success" href="index.html">Home</a>
-      <a class="nav-link text-success" href="productos.html">Productos</a>
-      <a class="nav-link text-success" href="nosotros.html">Nosotros</a>
-      <a class="nav-link text-success" href="blog.html">Blogs</a>
-      <a class="nav-link text-success" href="contacto.html">Contacto</a>
-    </div>
+  <!-- Navbar responsiva -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow p-2">
+      <div class="container">
+        <!-- Logo / Nombre -->
+        <a class="navbar-brand text-success fw-bold" href="index.html">DetoxNow</a>
 
-    <!-- Carrito alineado a la derecha -->
-    <a href="carrito.html" class="nav-link text-success">
-    🛒 <span id="cartCount" class="badge bg-warning text-dark">0</span>
-</a>
-  </nav>
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenido colapsable -->
+        <div class="collapse navbar-collapse justify-content-between" id="menuNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link text-success" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-success" href="productos.html">Productos</a></li>
+            <li class="nav-item"><a class="nav-link text-success" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link text-success" href="blog.html">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link text-success" href="contacto.html">Contacto</a></li>
+          </ul>
+
+          <!-- Carrito -->
+          <a href="carrito.html" class="btn btn-outline-success">
+            🛒 <span id="cartCount" class="badge bg-warning text-dark">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
 </div>
   <!-- Contenedor centrado -->
   <div class="d-flex justify-content-center align-items-center">
