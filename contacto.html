@@ -42,11 +42,10 @@ wIH" crossorigin="anonymous">
       <a class="nav-link text-success" href="contacto.html">Contacto</a>
     </div>
 
-    <!-- Carrito alineado a la derecha -->
-    <a href="carrito.html" class="nav-link text-success">
-      <i class="bi bi-cart-fill"></i> 
-      <span class="badge bg-warning text-dark">3</span>
-    </a>
+        <!-- Carrito alineado a la derecha -->
+      <a href="carrito.html" class="nav-link text-success">
+    🛒 <span id="cartCount" class="badge bg-warning text-dark">0</span>
+      </a>
   </nav>
 </div>
 
@@ -77,6 +76,8 @@ wIH" crossorigin="anonymous">
           <div class="mb-3">
             <label for="mensaje" class="form-label">Mensaje</label>
             <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            <small id="contadorMensaje" class="form-text text-muted">0 / 500 caracteres</small>
+
           </div>
           <button type="submit" class="btn btn-success">Enviar</button>
         </form>
@@ -94,7 +95,7 @@ wIH" crossorigin="anonymous">
   </div>
 
 
-  
+<script src="validacionCarrito.js"></script>
 <script src="contacto.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>

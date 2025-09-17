@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Longitud
   
-    requisitos.longitud.classList.toggle("text-success", val.length >= 8);
-    requisitos.longitud.classList.toggle("text-danger", val.length < 8);
+    requisitos.longitud.classList.toggle("text-success", val.length >= 4 && val.length <= 10);
+    requisitos.longitud.classList.toggle("text-danger", val.length < 4 || val.length > 10);
     //Mayuscula
     requisitos.mayuscula.classList.toggle("text-success", /[A-Z]/.test(val));
     requisitos.mayuscula.classList.toggle("text-danger", !/[A-Z]/.test(val));
@@ -74,27 +74,32 @@ confirmPassword.addEventListener("input", function () {
     let valido = true;
 
     // Nombre
+
     const nombre = document.getElementById("nombre");
-    if (nombre.value.trim() === "") {
-      nombre.classList.add("is-invalid");
-      valido = false;
-    } else {
-      nombre.classList.remove("is-invalid");
-      nombre.classList.add("is-valid");
-    }
+const nombreValor = nombre.value.trim();
+
+if (nombreValor === "" || nombreValor.length > 100) {
+  nombre.classList.add("is-invalid");
+  nombre.classList.remove("is-valid");
+  valido = false;
+} else {
+  nombre.classList.remove("is-invalid");
+  nombre.classList.add("is-valid");
+}
+
 
     // Correo (ya con dominio duoc)
     const duocRegex = /^[^\s@]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
-    if (!duocRegex.test(correo.value)) {
-      correo.classList.add("is-invalid");
+    if (!duocRegex.test(correo.value) || correo.value.length > 100) {
+    correo.classList.add("is-invalid");
       valido = false;
     } else {
       correo.classList.remove("is-invalid");
       correo.classList.add("is-valid");
     }
 
-    // Contraseña
-    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+    // Contraseña/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{4,10}$/;
+    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{4,10}$/;
     if (!passRegex.test(password.value)) {
       password.classList.add("is-invalid");
       valido = false;

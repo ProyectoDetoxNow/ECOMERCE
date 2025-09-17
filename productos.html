@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,24 +21,24 @@
                 <a class="nav-link text-success" href="blog.html">Blogs</a>
                 <a class="nav-link text-success" href="contacto.html">Contacto</a>
             </div>
+            <!-- Carrito alineado a la derecha -->
             <a href="carrito.html" class="nav-link text-success">
-                <i class="bi bi-cart-fill"></i>
-                <span class="badge bg-warning text-dark">3</span>
+                🛒 <span id="cartCount" class="badge bg-warning text-dark">0</span>
             </a>
         </nav>
     </div>
     <div class="container">
-  <nav class="d-flex justify-content-end p-3">
-  <a class="text-end nav-link text-success me-2" href="login.html">Iniciar sesión</a>
-  <a class="text-end nav-link text-success me-2">|</a>
-  <a class="text-end nav-link text-success me-2" href="registro.html">Registro</a>
-  </nav>
- </div>
+        <nav class="d-flex justify-content-end p-3">
+            <a class="text-end nav-link text-success me-2" href="login.html">Iniciar sesión</a>
+            <a class="text-end nav-link text-success me-2">|</a>
+            <a class="text-end nav-link text-success me-2" href="registro.html">Registro</a>
+        </nav>
+    </div>
 
     <h1 class="story-script-regular text-center">Productos</h1>
 
     <div class="container mt-5">
-         <div class="row g-4">
+        <div class="row g-4">
             <!-- Card 1 -->
             <div class="col-md-4">
                 <div class="card shadow clickable" onclick="window.location.href='test.html?producto=batido-verde'">
@@ -52,7 +53,8 @@
 
             <!-- Card 2 -->
             <div class="col-md-4">
-                <div class="card shadow clickable" onclick="window.location.href='detProducto.html?producto=batido-tropical'">
+                <div class="card shadow clickable"
+                    onclick="window.location.href='detProducto.html?producto=batido-tropical'">
                     <img src="imagenes/Batido Tropical Detox.jpg" class="img-producto" alt="Batido Tropical">
                     <div class="card-body">
                         <h5 class="card-title">Batido Tropical Detox</h5>
@@ -64,7 +66,8 @@
 
             <!-- Card 3 -->
             <div class="col-md-4">
-                <div class="card shadow clickable" onclick="window.location.href='detProducto.html?producto=batido-limon-chia'">
+                <div class="card shadow clickable"
+                    onclick="window.location.href='detProducto.html?producto=batido-limon-chia'">
                     <img src="imagenes/Batido Limón & Chía.jpg" class="img-producto" alt="Batido Limón & Chía">
                     <div class="card-body">
                         <h5 class="card-title">Batido Limón & Chía</h5>
@@ -76,7 +79,8 @@
 
             <!-- Producto 4 -->
             <div class="col-md-4 mb-4">
-                <div class="card shadow clickable" onclick="window.location.href='detProducto.html?producto=batido-rojo'">
+                <div class="card shadow clickable"
+                    onclick="window.location.href='detProducto.html?producto=batido-rojo'">
                     <img src="imagenes/Producto 1.jpg" class="img-producto" alt="Batido Rojo Antioxidante">
                     <div class="card-body">
                         <h5 class="card-title">Batido Rojo Antioxidante</h5>
@@ -88,7 +92,8 @@
 
             <!-- Producto 5 -->
             <div class="col-md-4 mb-4">
-                <div class="card shadow clickable" onclick="window.location.href='detProducto.html?producto=batido-verde-dulce'">
+                <div class="card shadow clickable"
+                    onclick="window.location.href='detProducto.html?producto=batido-verde-dulce'">
                     <img src="imagenes/Producto 1.jpg" class="img-producto" alt="Batido Verde Dulce">
                     <div class="card-body">
                         <h5 class="card-title">Batido Verde Dulce</h5>
@@ -100,7 +105,8 @@
 
             <!-- Producto 6 -->
             <div class="col-md-4 mb-4">
-                <div class="card shadow clickable" onclick="window.location.href='detProducto.html?producto=batido-cremoso'">
+                <div class="card shadow clickable"
+                    onclick="window.location.href='detProducto.html?producto=batido-cremoso'">
                     <img src="imagenes/Producto 1.jpg" class="img-producto" alt="Batido Cremoso Detox">
                     <div class="card-body">
                         <h5 class="card-title">Batido Cremoso Detox</h5>
@@ -112,42 +118,47 @@
 
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
+    <script src="validacionCarrito.js"></script>
+    <script src="producto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        
 </body>
 <!-- Footer -->
 <footer class="bg-light border-top mt-5">
-  <div class="container py-4">
-    <div class="row">
-      <!-- Columna 1: Nombre del sitio -->
-      <div class="col-md-3 mb-3">
-        <h6 class="text-uppercase color: #4CAF50">Detox Now</h6>
-        <div class="d-flex gap-2 mt-2">
-          <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" width="40">
-          <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="Mastercard" width="40">
-          <img src="https://img.icons8.com/ios-filled/48/000000/paypal.png" alt="PayPal" width="40">
+    <div class="container py-4">
+        <div class="row">
+            <!-- Columna 1: Nombre del sitio -->
+            <div class="col-md-3 mb-3">
+                <h6 class="text-uppercase color: #4CAF50">Detox Now</h6>
+                <div class="d-flex gap-2 mt-2">
+                    <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" width="40">
+                    <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="Mastercard" width="40">
+                    <img src="https://img.icons8.com/ios-filled/48/000000/paypal.png" alt="PayPal" width="40">
+                </div>
+            </div>
+
+            <!-- Columna 2: Categorías -->
+            <div class="col-md-4 mb-3">
+                <h6 class="text-uppercase">Categorías</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-dark">Política de Privacidad</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Términos y Condiciones</a></li>
+                    <li><a href="contacto.html" class="text-decoration-none text-dark">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Newsletter -->
+            <div class="col-md-5 mb-3">
+                <h6 class="text-uppercase">Estas a un paso, suscribete a nuestro Newsletter:</h6>
+                <form class="d-flex">
+                    <input type="email" class="form-control me-2" placeholder="Ingresar Email">
+                    <button class="btn btn-dark" type="submit">Subscribir</button>
+                </form>
+            </div>
         </div>
-      </div>
-
-      <!-- Columna 2: Categorías -->
-      <div class="col-md-4 mb-3">
-        <h6 class="text-uppercase">Categorías</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-decoration-none text-dark">Política de Privacidad</a></li>
-          <li><a href="#" class="text-decoration-none text-dark">Términos y Condiciones</a></li>
-          <li><a href="contacto.html" class="text-decoration-none text-dark">Contacto</a></li>
-        </ul>
-      </div>
-
-      <!-- Columna 3: Newsletter -->
-      <div class="col-md-5 mb-3">
-        <h6 class="text-uppercase">Estas a un paso, suscribete a nuestro Newsletter:</h6>
-        <form class="d-flex">
-          <input type="email" class="form-control me-2" placeholder="Ingresar Email">
-          <button class="btn btn-dark" type="submit">Subscribir</button>
-        </form>
-      </div>
     </div>
-  </div>
 </footer>
+
 </html>
