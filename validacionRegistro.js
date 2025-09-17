@@ -31,19 +31,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const val = password.value;
 
     // Longitud
-    requisitos.longitud.style.color = val.length >= 8 ? "green" : "red";
-
-    // Mayúscula
-    requisitos.mayuscula.style.color = /[A-Z]/.test(val) ? "green" : "red";
-
-    // Minúscula
-    requisitos.minuscula.style.color = /[a-z]/.test(val) ? "green" : "red";
-
+  
+    requisitos.longitud.classList.toggle("text-success", val.length >= 8);
+    requisitos.longitud.classList.toggle("text-danger", val.length < 8);
+    //Mayuscula
+    requisitos.mayuscula.classList.toggle("text-success", /[A-Z]/.test(val));
+    requisitos.mayuscula.classList.toggle("text-danger", !/[A-Z]/.test(val));
+    // Minúscula  
+    requisitos.minuscula.classList.toggle("text-success", /[a-z]/.test(val));
+    requisitos.minuscula.classList.toggle("text-danger", !/[a-z]/.test(val));
     // Número
-    requisitos.numero.style.color = /\d/.test(val) ? "green" : "red";
-
+    requisitos.numero.classList.toggle("text-success", /\d/.test(val));
+    requisitos.numero.classList.toggle("text-danger", !/\d/.test(val));
     // Especial
-    requisitos.especial.style.color = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(val) ? "green" : "red";
+    requisitos.especial.classList.toggle("text-success", /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(val));
+    requisitos.especial.classList.toggle("text-danger", !/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(val));
+
   });
 
    // --- Validación inmediata SOLO en confirmación de contraseña ---
