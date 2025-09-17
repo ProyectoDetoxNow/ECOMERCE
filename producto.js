@@ -33,7 +33,7 @@ const productos = {
     nombre: "Batido Rojo Antioxidante",
     precio: 4500,
     precioDisplay: "$4.500",
-    imagen: "imagenes/Producto 1.jpg",
+    imagen: "imagenes/BATIDO ROJO.jpg",
     descripcion: "Potente fuente de antioxidantes que protegen las células, favorecen la circulación y aportan energía natural.",
     related: ["batido-verde", "batido-tropical", "batido-cremoso"]
     },
@@ -42,7 +42,7 @@ const productos = {
     nombre: "Batido Cremoso Detox",
     precio: 4990,
     precioDisplay: "$4.990",
-    imagen: "imagenes/Producto 1.jpg",
+    imagen: "imagenes/BATIDO CREMOSO.jpg",
     descripcion: "Cremoso y saciante. El aguacate aporta grasas saludables y ayuda a mantener energía por más tiempo.",
     related: ["batido-verde", "batido-limon-chia", "batido-rojo"]
     },
@@ -51,7 +51,7 @@ const productos = {
     nombre: "Batido Verde Dulce",
     precio: 4300,
     precioDisplay: "$4.300",
-    imagen: "imagenes/Producto 1.jpg",
+    imagen: "imagenes/BATIDO VERDE DULCE.jpg",
     descripcion: "Combina lo detox del kale con la dulzura del mango y el plátano, nutritivo y agradable al paladar.",
     related: ["batido-verde", "batido-tropical", "batido-cremoso"]
     }
