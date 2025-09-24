@@ -6,10 +6,10 @@ const idProducto = params.get('producto') || 'batido-verde';
 const producto = productos[idProducto];
 
 // Elementos del DOM
-const elNombre = document.getElementById('producto-nombre');
-const elPrecio = document.getElementById('producto-precio');
-const elImagen = document.getElementById('producto-imagen');
-const elDesc = document.getElementById('producto-descripcion');
+const nombre = document.getElementById('producto-nombre');
+const precio = document.getElementById('producto-precio');
+const imagen = document.getElementById('producto-imagen');
+const desc = document.getElementById('producto-descripcion');
 const relatedContainer = document.getElementById('relatedContainer');
 const cartCount = document.getElementById('cartCount');
 
@@ -25,11 +25,11 @@ if (!producto) {
 	updateCartCount();
 } else {
 	// Poblar elementos
-	elNombre.textContent = producto.nombre;
-	elPrecio.textContent = producto.precioDisplay || ('$' + (producto.precio || '0'));
-	elImagen.src = producto.imagen;
-	elImagen.alt = producto.nombre;
-	elDesc.textContent = producto.descripcion;
+	nombre.textContent = producto.nombre;
+	precio.textContent = producto.precioDisplay || ('$' + (producto.precio || '0'));
+	imagen.src = producto.imagen;
+	imagen.alt = producto.nombre;
+	desc.textContent = producto.descripcion;
 
 	// Mostrar relacionados
 	relatedContainer.innerHTML = '';
