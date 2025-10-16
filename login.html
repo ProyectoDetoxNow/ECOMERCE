@@ -78,24 +78,38 @@ wIH" crossorigin="anonymous">
   <div class="d-flex justify-content-center align-items-center">
     <div class="form-container-l">
       <main>
-              <form class="row g-3" id="login">
-                <div class="col-md-6 w-100">
-                    <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4">
-                </div>
-                <div class="col-md-6 w-100">
-                    <label for="inputPassword4" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword4">
-                </div>
-                <div class="col-12">
-                    <a class="btn btn-success w-100" href="sesion.html#" type="submit" class="btn btn-primary">Iniciar sesion</a>
-                </div>
-                </form>
+              <form id="login" class="row g-3 needs-validation" novalidate>
+
+  <!-- Correo -->
+  <div class="mb-3">
+    <label for="correo" class="form-label">Correo Electrónico</label>
+    <input type="email" class="form-control" id="correo" required>
+    <div class="invalid-feedback">
+      Solo se aceptan correos con dominio @duoc.cl, @profesor.duoc.cl o @gmail.com.
+    </div>
+  </div>
+
+  <!-- Contraseña -->
+  <div class="mb-3">
+    <label for="password" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" id="password" required>
+    <div class="invalid-feedback">
+      La contraseña debe tener entre 4 y 10 caracteres.
+    </div>
+  </div>
+
+  <!-- Botón -->
+  <div class="col-12">
+    <button type="submit" class="btn btn-success w-100">Iniciar sesión</button>
+  </div>
+
+</form>
       </main>
 
     </div>
   </div>   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="validacionLogin.js"></script>
 </body>
 <!-- Footer -->
 <footer class="bg-light border-top mt-5">

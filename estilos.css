@@ -125,6 +125,11 @@ input {
   width: 250px;
 }
 
+input.is-invalid {
+  border-color: #dc3545 !important;
+  background-color: #ffe6e6;
+}
+
 .form-container-l {
   max-width: 500px;           /* ancho máximo del contenedor */
   background: #fff;           /* fondo blanco */
